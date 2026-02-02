@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>히마와리를 위한 테트리스</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="gameTitle">히마와리를 위한 테트리스 🌻</div>
+    
+    <div id="gameContainer">
+        <canvas id="gameCanvas" width="300" height="600"></canvas>
+    
+    <div id="sidePanel">
+        <div id="time">Time: 0s</div>
+        <div id="score">Score: 0</div>
+        
+        <div id="nextBlocks">
+            <div>
+                <div class="next-label">다음 블록</div>
+                <canvas id="next1" width="80" height="80"></canvas>
+            </div>
+            <div>
+                <div class="next-label">그 다음</div>
+                <canvas id="next2" width="80" height="80"></canvas>
+            </div>
+            <div>
+                <div class="next-label">그 다다음</div>
+                <canvas id="next3" width="80" height="80"></canvas>
+            </div>
+        </div>
+        
+        <button id="restartBtn">다시 시작하기</button>
+        
+        <div id="ranking">
+            <h3>🏆 최고 기록</h3>
+            <ol id="rankingList">
+                <li>기록 없음</li>
+            </ol>
+        </div>
+    </div>
+    
+    <div id="nicknameModal" style="display: none;">
+        <div id="modalContent">
+            <h2>게임 오버!</h2>
+            <p>점수: <span id="modalScore">0</span>점</p>
+            <p>시간: <span id="modalTime">0</span>초</p>
+            <input type="text" id="nicknameInput" placeholder="닉네임을 입력하세요" maxlength="10">
+            <button id="saveRankingBtn">기록 저장</button>
+        </div>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>
